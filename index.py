@@ -1,5 +1,7 @@
 import pygame
-
+from calc.thrust import calculate_thrust
+from settings import WIDTH, HEIGHT
+from assets.asset_loader import load_fuels
 #################################### CLASSES ##################################
 
 
@@ -10,11 +12,8 @@ import pygame
 
 #################################### GLOBAL VARIABLES #########################
 pygame.init()
-
+load_fuels()
 #You may change the width and height of your window
-WIDTH = 1280
-HEIGHT = 720
-
 icon = pygame.image.load("./assets/images/icon.ico")
 icon = pygame.transform.scale(icon, (64, 64))
 pygame.display.set_icon(icon)

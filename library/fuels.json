@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Home-Depot Ammonium Perchlorate",
+    "state": "solid",
+    "density": "1950",
+    "purity": 0.8,
+    "type": "oxidizer"
+  },
+  {
+    "name": "Home-Depot Aluminum Powder",
+    "state": "solid",
+    "density": 2700,
+    "purity": 0.7,
+    "type": "fuel"
+  },
+  {
+    "name": "Ammonium Perchlorate",
+    "state": "solid",
+    "density": "1950",
+    "purity": 0.99,
+    "type": "oxidizer"
+  },
+  {
+    "name": "Aluminum Powder",
+    "state": "solid",
+    "density": 2700,
+    "purity": 0.98,
+    "type": "fuel"
+  }
+]
