@@ -1,0 +1,18 @@
+[
+  {
+    "flow_rate": 0.05,
+    "exhaust_velocity": 1056,
+    "material": "cardboard",
+    "size_scale": 0.1,
+    "name": "candy-rocket",
+    "type": "solid",
+    "exit_area": 0.1,
+    "asset": "candy_rocket.png",
+    "height": 120,
+    "width": 70,
+    "side-offset": 9,
+    "fuel_capacity": 0.37,
+    "mass": 0.125,
+    "drag-factor": 0.003
+  }
+]
