@@ -27,18 +27,22 @@ def change_burn_out_object():
         return False
 
 
-def get_thrust_object():
-    from index import pygame
+def get_thrust_object(pygame, width):
     global thrust_image_number
     global images
     gen_image = images[thrust_image_number]
     gen_image = pygame.transform.rotate(gen_image, 90)
+    height = int(width * (gen_image.get_height()/gen_image.get_width()))
+    gen_image = pygame.transform.scale(gen_image, (width, height))
+
+
     return gen_image
 
-def get_burn_out_object():
-    from index import pygame
+def get_burn_out_object(pygame, width):
     global burn_out_anim
     global burn_out_images
     gen_image = burn_out_images[burn_out_anim]
     gen_image = pygame.transform.rotate(gen_image, 90)
+    height = int(width * (gen_image.get_height()/gen_image.get_width()))
+    gen_image = pygame.transform.scale(gen_image, (width, height))
     return gen_image

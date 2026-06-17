@@ -1,8 +1,7 @@
 from settings import HEIGHT, WIDTH, STAR_NUMBER
 import random
 
-def generate_star_surface():
-    from index import pygame
+def generate_star_surface(pygame):
     surface = pygame.Surface((WIDTH, HEIGHT), pygame.SRCALPHA) # make transparent surface so i can draw stars
 
     for i in range(STAR_NUMBER):

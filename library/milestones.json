@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Touch the sky!",
+        "description": "Reach 100m altitude",
+        "goal": "max_alt",
+        "value": 100,
+        "money": 100,
+        "reputation": 1,
+        "unlock_components": [],
+        "unlock_engines": []
+    },
+    {
+        "name": "Above the Clouds",
+        "description": "Reach 1km altitude",
+        "goal": "max_alt",
+        "value": 1000,
+        "money": 250,
+        "reputation": 1,
+        "unlock_components": [],
+        "unlock_engines": []
+    },
+    {
+        "name": "High Flyer",
+        "description": "Reach 5km altitude",
+        "goal": "max_alt",
+        "value": 5000,
+        "money": 500,
+        "reputation": 2,
+        "unlock_components": [],
+        "unlock_engines": []
+    },
+    {
+        "name": "Edge Seeker",
+        "description": "Reach 10km altitude",
+        "goal": "max_alt",
+        "value": 10000,
+        "money": 750,
+        "reputation": 2,
+        "unlock_components": [],
+        "unlock_engines": []
+    },
+    {
+        "name": "Atmosphere's End",
+        "description": "Reach 25km altitude",
+        "goal": "max_alt",
+        "value": 25000,
+        "money": 1000,
+        "reputation": 3,
+        "unlock_components": [],
+        "unlock_engines": []
+    },
+    {
+        "name": "Near Space",
+        "description": "Reach 50km altitude",
+        "goal": "max_alt",
+        "value": 50000,
+        "money": 1500,
+        "reputation": 3,
+        "unlock_components": [],
+        "unlock_engines": []
+    },
+    {
+        "name": "Space Bound",
+        "description": "Reach 75km altitude",
+        "goal": "max_alt",
+        "value": 75000,
+        "money": 2500,
+        "reputation": 4,
+        "unlock_components": [],
+        "unlock_engines": []
+    },
+    {
+        "name": "Orbit Awaits",
+        "description": "Reach 90km altitude",
+        "goal": "max_alt",
+        "value": 90000,
+        "money": 4000,
+        "reputation": 5,
+        "unlock_components": [],
+        "unlock_engines": []
+    },
+    {
+        "name": "Into Orbit",
+        "description": "Achieve orbit",
+        "goal": "orbit",
+        "value": 1,
+        "money": 10000,
+        "reputation": 10,
+        "unlock_components": [],
+        "unlock_engines": []
+    }
+]

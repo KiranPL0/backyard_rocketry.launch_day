@@ -1,8 +1,7 @@
 import random
 from settings import LOW_BAND, MEDIUM_BAND, HIGH_BAND, LOW_ALT_CLOUDS, MEDIUM_ALT_CLOUDS, HIGH_ALT_CLOUDS
 from classes.cloud import Cloud
-def generate_clouds(quantity):
-    from index import pygame
+def generate_clouds(pygame, quantity):
     clouds = []
     for i in range(quantity):
         band = random.choice([LOW_BAND, MEDIUM_BAND, HIGH_BAND])

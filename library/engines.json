@@ -8,11 +8,51 @@
     "type": "solid",
     "exit_area": 0.1,
     "asset": "candy_rocket.png",
-    "height": 120,
-    "width": 70,
+    "height": 60,
+    "width": 35,
     "side-offset": 9,
     "fuel_capacity": 0.37,
     "mass": 0.125,
-    "drag-factor": 0.003
+    "drag-factor": 0.003,
+    "stage": 0,
+    "cost": 20
+  },
+  {
+    "flow_rate": 0.09,
+    "exhaust_velocity": 1100,
+    "material": "cardboard/aluminum",
+    "size_scale": 0.1,
+    "name": "test-engine",
+    "type": "hybrid",
+    "exit_area": 0.1,
+    "asset": "test_engine.png",
+    "height": 60,
+    "width": 35,
+    "side-offset": 9,
+    "fuel_capacity": 1,
+    "mass": 1.25,
+    "drag-factor": 0.0025,
+    "stage": 1,
+    "cost": 75
+  },
+
+  {
+    "flow_rate": 0.14,
+    "exhaust_velocity": 1200,
+    "material": "aluminum",
+    "size_scale": 0.12,
+    "name": "aluminum_engine",
+    "type": "liquid",
+    "exit_area": 0.12,
+    "asset": "aluminum_engine.png",
+    "height": 70,
+    "width": 40,
+    "side-offset": 10,
+    "fuel_capacity": 1.0,
+    "mass": 10,
+    "drag-factor": 0.0025,
+    "stage": 1,
+    "cost": 120
   }
+
 ]
