@@ -103,7 +103,7 @@
     "position": "internal"
   },
   {
-    "mass": 5,
+    "mass": 1,
     "width": 0,
     "height": 0,
     "x-offset": 0,
@@ -186,8 +186,74 @@
     "stability_offset": null,
     "drag-factor": 0.0018,
     "position": "center"
+  },
+  {
+    "mass": 1.2,
+    "width": 70,
+    "height": 120,
+    "x-offset": 0,
+    "size_scale": 0.14,
+    "name": "composite_fuselage",
+    "asset": "composite_fuselage.png",
+    "type": "structural",
+    "stage": 2,
+    "cost": 200,
+    "fuel_capacity": 2,
+    "control_surface": false,
+    "stability_offset": null,
+    "drag-factor": 0.002,
+    "position": "center"
+  },
+  {
+    "mass": 0.4,
+    "width": 60,
+    "height": 100,
+    "x-offset": 0,
+    "size_scale": 0.14,
+    "name": "composite_nose_cone",
+    "asset": "composite_nose_cone.png",
+    "type": "structural",
+    "stage": 2,
+    "cost": 150,
+    "fuel_capacity": 0,
+    "control_surface": false,
+    "stability_offset": null,
+    "drag-factor": 0.001,
+    "position": "center"
+  },
+  {
+    "mass": 0.12,
+    "width": 30,
+    "height": 60,
+    "x-offset": -5,
+    "size_scale": 0.14,
+    "name": "composite_fin_left",
+    "asset": "composite_fin_left.png",
+    "type": "structural",
+    "stage": 2,
+    "cost": 100,
+    "fuel_capacity": 0,
+    "control_surface": true,
+    "stability_offset": 6,
+    "drag-factor": 0.0008,
+    "position": "left"
+  },
+  {
+    "mass": 0.12,
+    "width": 30,
+    "height": 60,
+    "x-offset": -15,
+    "size_scale": 0.14,
+    "name": "composite_fin_right",
+    "asset": "composite_fin_right.png",
+    "type": "structural",
+    "stage": 2,
+    "cost": 100,
+    "fuel_capacity": 0,
+    "control_surface": true,
+    "stability_offset": 6,
+    "drag-factor": 0.0008,
+    "position": "right"
   }
-
-
 
 ]

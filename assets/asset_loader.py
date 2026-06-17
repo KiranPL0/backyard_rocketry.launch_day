@@ -282,6 +282,11 @@ def import_milestones():
         loaded[8] = True
 
 
+def reset_milestones():
+    for milestone in milestones:
+        milestone.achieved = False
+
+
 def update_loaded_engines(player):
     global unlocked_engines
     unlocked_engines.clear()

@@ -46,7 +46,9 @@ class ComponentMenu:
                         MenuComponent(
                             engine.name,
                             f"Type: {engine.type}\nFuel Capacity: {engine.fuel_capacity} units\nMass: {engine.mass} kg\nCost: ${engine.cost}",
-                            ui_elements["icon_" + engine.asset.split(".")[0]],
+                            pygame.image.load(
+                                "./assets/rocket_components/engine/" + engine.asset
+                            ).convert_alpha(),
                             callback_action,
                         )
                     )

@@ -118,20 +118,6 @@
     "reputation_required": 5
   },
   {
-    "name": "Aero Engine Test",
-    "description": "Use aero engine",
-    "goal": "launch_with",
-    "value": "engine/aero-engine",
-    "money": 1100,
-    "reputation": 3,
-    "company": "Aero Club",
-    "unlock_components": [],
-    "unlock_engines": [],
-    "stage": 1,
-    "reputation_required": 5
-  },
-
-  {
     "name": "CanSat High",
     "description": "Reach 50km alt",
     "goal": "max_alt",

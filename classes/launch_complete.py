@@ -30,6 +30,8 @@ class LaunchComplete:
         from assets.asset_loader import font_40, font_15, font_20, font_30
         from assets.asset_loader import milestones
 
+        self.check_mission_end()
+
         if self.player.active_contract and self.contract_preserved == False:
             self.active_contract = self.player.active_contract
             self.contract_preserved = True
@@ -154,6 +156,7 @@ class LaunchComplete:
             self.active_contract = None
             self.milestones_achieved_cycle = []
             self.rocket.reset()
+            self.player.active_contract = None
             callback("hq")
             self.__init__(self.rocket, self.player)
         if mouse_collision(
@@ -161,6 +164,7 @@ class LaunchComplete:
         ):
             self.active_contract = None
             self.milestones_achieved_cycle = []
+            self.player.active_contract = None
             self.rocket.reset()
-            callback("main_menu")
             self.__init__(self.rocket, self.player)
+            callback("main_menu")

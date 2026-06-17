@@ -158,6 +158,32 @@ def scene_one_two_transition():
     player.stage = 2
 
 
+def final_cutscene_finish():
+    global current_scene
+    global story
+    global player
+    from assets.asset_loader import reset_milestones
+
+    reset_milestones()
+    story = Story(
+        [
+            "Welcome to Backyard Rocketry: Launch Day!",
+            "Your mission is to build and launch rockets.",
+            "You'll have to complete contracts to earn money.",
+            "Build rockets in the VAB, and launch them!",
+            "You'll progress, growing your rocketry program.",
+            "Reaching milestones will help you progress further.",
+            "Earning reputation yields better contracts.",
+            "You'll unlock parts by progressing through the game.",
+            "Your ultimate goal is to achieve orbital flight!",
+            "Good luck, and have fun playing!",
+        ],
+        line_finish_callback=lambda: scene_change_callback("hq"),
+    )
+    player.__init__()
+    current_scene = "main_menu"
+
+
 def spacecutscene():
     global current_scene
     global story
@@ -166,12 +192,13 @@ def spacecutscene():
         [
             "You have successfully made it to orbit.",
             "You owe yourself a pat on the back.",
-            "Congratulations! You have completed Backyard Rocketry: Launch Day!",
+            "Congratulations! You have completed...",
+            "...Backyard Rocketry: Launch Day!",
             "I hope you enjoyed playing this game.",
         ],
     )
     current_scene = "story"
-    story.line_finish_callback = lambda: scene_change_callback("main_menu")
+    story.line_finish_callback = final_cutscene_finish
 
 
 save_game_menu = SaveGameContextMenu(focus_game, unfocus_game)
@@ -205,11 +232,11 @@ story = Story(
         "Earning reputation yields better contracts.",
         "You'll unlock parts by progressing through the game.",
         "Your ultimate goal is to achieve orbital flight!",
+        "The key to success is experimentation.",
         "Good luck, and have fun playing!",
     ],
     line_finish_callback=lambda: scene_change_callback("hq"),
 )
-
 #################################### GAME LOOP ################################
 running = True
 full_loaded = False
@@ -245,6 +272,7 @@ while running:
             if event.key == pygame.K_d and current_scene == "launch":
                 rocket.stop_moving()
         if event.type == pygame.MOUSEBUTTONDOWN:
+            event_scene = current_scene
             if game_focus == False and save_game_menu.hidden == False:
                 button_status = save_game_menu.button_update(pygame, event)
                 if button_status != None:
@@ -274,14 +302,14 @@ while running:
                 )
 
             if (
-                current_scene == "launch"
+                event_scene == "launch"
                 and rocket.running == False
                 and rocket.flight_complete == True
             ):
                 mission_end_screen.handle_click(pygame, scene_change_callback)
-            if current_scene == "hq":
+            elif event_scene == "hq":
                 headquarters.handle_click(pygame)
-            if current_scene == "main_menu":
+            elif event_scene == "main_menu":
                 main_menu.handle_click(pygame)
 
     if not running:

@@ -51,10 +51,10 @@ MAX_PARTICLE_COUNT = 100
 VAB_ROCKET_LOCATIONS = {
     0: (WIDTH // 2, HEIGHT - 100, 3),  # X, Y, Scale
     1: (WIDTH // 2, HEIGHT - 100 // 2, 1),
-    2: (WIDTH // 2, HEIGHT // 2, 1),
+    2: (WIDTH // 2, HEIGHT - 100 // 2, 1),
 }
 
-VAB_LEVEL_CONSTRAINTS = {0: {"height": 200}, 1: {"height": 500}, 2: {"height": 1000}}
+VAB_LEVEL_CONSTRAINTS = {0: {"height": 200}, 1: {"height": 500}, 2: {"height": 750}}
 
 ## STAGES:
 STAGE_THRESHOLDS = [0, 5, 12]

@@ -53,6 +53,24 @@
     "drag-factor": 0.0025,
     "stage": 1,
     "cost": 120
-  }
+  },
+  {
+  "flow_rate": 0.22,
+  "exhaust_velocity": 1800,
+  "material": "composite",
+  "size_scale": 0.14,
+  "name": "composite_engine",
+  "type": "liquid",
+  "exit_area": 0.15,
+  "asset": "composite_engine.png",
+  "height": 120,
+  "width": 50,
+  "side-offset": 11,
+  "fuel_capacity": 2.5,
+  "mass": 4.0,
+  "drag-factor": 0.002,
+  "stage": 2,
+  "cost": 250
+}
 
 ]

@@ -72,7 +72,6 @@ class Rocket:
 
     def fuel(self, oxidizer_type, fuel_type, mixture):
         self.calculate_propellant_capacity()
-        print("fuelling w/ ", oxidizer_type, fuel_type, mixture)
         for i in fuels:
             if i["name"] == oxidizer_type and i["type"] == "oxidizer":
                 self.propellants["oxidizer"] = i
@@ -81,7 +80,6 @@ class Rocket:
         self.oxidizer_fuel_ratio = mixture
         self.propellant_amount["oxidizer"] = self.propellant_capacity * (mixture[0])
         self.propellant_amount["fuel"] = self.propellant_capacity * (mixture[1])
-        print(self.propellant_amount)
 
     def check_control_surface(self):
         self.has_control_surface = False
@@ -191,7 +189,9 @@ class Rocket:
             self.running = False
 
         if self.running == True:
-            if self.y > 100000 and self.v_x > 20:
+            if self.y > 100000:
+                self.orbit = True
+                mission_end_screen.check_mission_end()
                 self.end_flight()
                 end_cutscene()
                 # finally made it

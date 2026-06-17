@@ -193,6 +193,7 @@ class MilestonesMenu:
         curr_page = 0
 
         self.page_components = {}
+        self.page_titles = []
         for i in range(len(milestones)):
             milestone = milestones[i]
             if curr_page in self.page_components:
@@ -214,7 +215,7 @@ class MilestonesMenu:
 
                 else:
                     curr_page += 1
-                    self.page_titles.append("Contracts")
+                    self.page_titles.append("Milestones")
                     self.page_components[curr_page] = []
                     if milestone.check_achivement_list(self.player):
                         self.page_components[curr_page].append(
@@ -231,7 +232,7 @@ class MilestonesMenu:
                             )
                         )
             else:
-                self.page_titles.append("Contracts")
+                self.page_titles.append("Milestones")
                 self.page_components[curr_page] = []
                 if milestone.check_achivement_list(self.player):
                     self.page_components[curr_page].append(
